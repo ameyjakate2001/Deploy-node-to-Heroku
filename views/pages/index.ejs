@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DetailsDekho.com</title>
+    <link rel="stylesheet" href="/assests/css/homepage-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+  integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+  crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@400;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="root">
+        <div class="down-Arrow">
+          <a href="#homepage">
+                
+          </a>
+             <a href="#full-form">
+       
+             </a>
+        </div>
+
+            <div class="background" id="homepage">
+                <header class="header dark-theme">
+                    <div id="topheader">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                
+                    <div class="navbar-container">
+                        <a class="navbar-brand" class="heading text-danger" href="/">DetailsDekho</a>
+                
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar top-bar"></span>
+                        <span class="icon-bar middle-bar"></span>
+                        <span class="icon-bar bottom-bar"></span>
+                        </button>
+                
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <div class="inner-collapse">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item native">
+                                       <a class="nav-link " href="/">Home</a>
+                                    </li>
+                        
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="/about">About</a>
+                                    </li>
+                        
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="#myform"  aria-disabled="true">Contact Me</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    </nav>
+                </div>
+                </header>
+
+                <div class="homepage-content">
+                    <h1>This is Laptop Guide</h1>
+                    <h5>In This world of Growing fast You need to Know which Laptop is Best for You <br> Know The Technology Used In New Laptop <br> Go Down For More Details</h5>
+                    <a class="btn btn-info btn-lg mt-3 text-white" href="/form_submit" role="button">ADD OWN LAPTOP</a>
+              </div> 
+        </div>
+
+
+       <main id="main-content">
+
+           <div class="main-heading pt-4 text-white mb-5 text-center">
+                <h2>List Of Laptop</h2>
+           </div>
+
+          
+
+           <div class="fiter-and-sort-buton mb-5">
+              
+            <div class="row">
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <form action="/GetFilter/Brand" method="GET">
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect1" class="text-white">Brand</label>
+                    <select class="form-control form-input" name="Selected_Brand" class="mt-3" id="exampleFormControlSelect1">
+                      <option>ASUS</option>
+                      <option>APPLE</option>
+                      <option>HP</option>
+                      <option>DELL</option>
+                      <option>ACER</option>
+                    </select>
+                    <button type="submit" id="Brand-button" class="btn btn-primary mt-3">FILTER</button>
+                  </div>
+                </form>
+                </div>
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <form action="/SortBy/Price_Range" method="GET">
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect4" class="text-white">Price</label>
+                    <select class="form-control form-input" name="Selected_Price_Range" class="mt-3 " id="exampleFormControlSelect4">
+                      <option>Less Than 40K</option>
+                      <option>Less Than 60K</option>
+                      <option>Greater Than 60K</option>
+                    </select>
+                    <button type="submit" id="Price-button" class="btn btn-primary mt-3">SORT</button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <form action="/SortBy/Ram" method="GET">
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect2" class="text-white">RAM</label>
+                    <select class="form-control form-input" name="Selected_Ram" class="mt-3" id="exampleFormControlSelect2">
+                      <option >4 GB</option>
+                      <option name="8r">8GB</option>
+                      <option name="16r">16GB</option>
+                    </select>
+                    <button type="submit" id="Ram-button" class="btn btn-primary mt-3">SORT</button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-lg-3 col-sm-6 col-xs-12">
+                <form action="/SortBy/Inch" method="GET">
+                  <div class="form-group">
+                    <label for="exampleFormControlSelect3" class="text-white">INCH</label>
+                    <select class="form-control form-input" name="Selected_Inch_Range" class="mt-3" id="exampleFormControlSelect3">
+                      <option>13.6 INCH</option>
+                      <option>14.2 INCH</option>
+                      <option>15.6 INCH</option>
+                    </select>
+                    <button type="submit" id="Inch-button" class="btn btn-primary mt-3">SORT</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+             
+           </div>
+
+           
+           <div class="dyanamic-content text-center">
+            <h4 class="dyanamic text-success"><%=filter%></h4>
+          </div>
+           
+             <div class="showing-details">
+                <div class="row">
+                  <% items.forEach(function(item){ %>
+
+                      <div class="col-lg-4 col-md-6 col-sm-12 mb-3 each-card-styling">
+                        <div class="card h-100">
+                          <div class="bg-image hover-overlay ripple" data-ripple-color="light">
+                            <img
+                              src="data:image/<%=item.img.contentType%>;base64,
+                              <%=item.img.data.toString('base64')%>"
+                              class="img-fluid"
+                            />
+                            <a href="#!">
+                              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15)"></div>
+                            </a>
+                          </div>
+                          <div class="card-body">
+                            <h4 class="card-title" style="font-weight: 600;"><%= item.Name %></h4>
+                            <a href="/Details/ID:-/<%= item._id %>" class="btn btn-primary">Go Details</a>
+                          </div>
+                        </div>
+                      </div>
+
+                <%  }); %>
+                </div>
+             </div>
+
+       </main>
+
+       <footer class="footer-distributed" id="full-form">
+        <div class="row ">
+
+          <div class="col-md-6 div-1-for-footer ">
+            <div class="text-white footer-left">
+                  <h3><span><img src="/assests/images/form-logo.PNG"></span></h3>
+                  <p class="text-white footer-links">
+                      Amey Jakate</br>
+                      Computer Engineer </br>
+                      Sggs Nanded.
+                  </p>
+                  <p class="footer-company-name">Smart Laptop Assistant © 2020</p>
+
+                <div class="footer-icons">
+                      <a href="https://www.facebook.com/amey.jakate.5/" target="_blank"><i class="fa fa-facebook text-white" aria-hidden="true"></i></a>
+                      <a href="https://twitter.com/JakateAmey/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                      <a href="https://www.linkedin.com/in/amey-jakate-07574919b/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                      <a href="https://www.instagram.com/amey_jakate_01/" target="_blank"><i class="text-white fa fa-instagram " aria-hidden="true"></i></a>
+                      
+                </div>
+           </div>
+          </div>
+
+          <div class="col-md-6 div-1-for-footer mt-2">
+              <h5 id="warningLogin" class="mt-3 text-danger"></h5>
+              <div class="footer-right">
+                  <h5 class="text-white mb-3">Contact Us</h5>
+                  <form action="/SubmitLogin" onsubmit="return validate_form();" id="myform" class="mt-3" method="post">
+                        <input type="email" id="myemail" class="mb-3 d-block" autocomplete="off" name="email" placeholder="Email">
+                        <textarea name="message" id="mytextarea" class="d-block" placeholder="Leave A Message"></textarea>
+                        <button class="btn btn-info mt-3">Send</button>
+                  </form>
+              </div>
+          </div>
+  
+      </footer>
+
+      <div class="copyright p-3">
+        <h6>© 2020 Copyright: <a href="/">DetailsDekho.com</a></h6>
+     </div>
+
+
+    </div>
+
+
+    <script src="/assests/javascript/index.js"></script>
+</body>
+</html>

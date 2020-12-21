@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DetailsDekho.com</title>
+    <link rel="stylesheet" href="/assests/css/DetailsPage.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+     <div id="root">
+         <div class="row motha-dibba">
+            <div class="col-md-8 col-sm-12 mt-5" style="margin:0 auto ;">
+                <div class="row lahan-dibba">
+                    <div class="col-md-5 photo-dibba ">
+                        <img src="data:image/<%=item[0].img.contentType%>;base64,
+                        <%=item[0].img.data.toString('base64')%>" class="img-fluid" alt="Image-not-found">
+                        <a href="<%=item[0].Link%>"  class="btn btn-warning w-50 mt-4">Buy Now</a>
+                    </div>
+                   
+                    <div class="col-md-7 info-dibba">
+                         <div class="row">
+                             <div class="col-sm-12">
+                                  <h2><%=item[0].Name%></h2>
+                                  <h4 class="green-text">Most Trustable Brand <%=item[0].Brand%></h4>
+                             </div>
+                             <div class="col-sm-12">
+                                 <div class="row">
+                                     <div class="col-xs-6 col-sm-6 mt-3 style="padding-left: 20px;">
+                                         <span class="">HDD:</span>
+                                         <br>
+                                         <span class="green-text"><%=item[0].properties.Hdd%></span>
+                                     </div>
+                                     <div class="col-xs-6 col-sm-6 mt-3 style="padding-left: 20px;">
+                                         <span>SDD:</span>
+                                         <br>
+                                         <span class="green-text"><%=item[0].properties.Ssd%></span>
+                                     </div>
+                                     <div class="col-xs-6 col-sm-6 mt-3 style="padding-left: 20px;">
+                                         <span>RAM:</span>
+                                         <br>
+                                         <span class="green-text"><%=item[0].properties.Ram%></span>
+                                     </div>
+                                     <div class="col-xs-6 col-sm-6 mt-3 style="padding-left: 20px;">
+                                         <span>PROCESSOR:</span>
+                                         <br>
+                                         <span class="green-text"><%=item[0].properties.processor%></span>
+                                     </div>
+                                     <div class="col-xs-6 col-sm-6 mt-3 style="padding-left: 20px;">
+                                         <span>PRICE:</span>
+                                         <br>
+                                         <span class="green-text"><%=item[0].properties.price%></span>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="col-sm-12" >
+                                <div class="row">
+                                    <div class="col-xs-6 col-sm-6 mt-3 style="padding-left: 20px;">
+                                        <span>GENERATION:</span>
+                                        <br>
+                                        <span class="green-text"><%=item[0].properties.generation%></span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 mt-3 style="padding-left: 20px;">
+                                        <span>OPERATING-SYSTEM:</span>
+                                        <br>
+                                        <span class="green-text"><%=item[0].properties.Operating_system%></span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 mt-3 style="padding-left: 20px;">
+                                        <span>GRAPHICS CARD:</span>
+                                        <br>
+                                        <span class="green-text"><%=item[0].properties.Graphics_card%></span>
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 mt-3 style="padding-left: 20px;">
+                                        <span>SCREEN-SIZE:</span>
+                                        <br>
+                                        <span class="green-text"><%=item[0].properties.Screen_size%></span>
+                                    </div>
+                                </div>
+                             </div>
+                             <div class="col-sm-12 mt-4 button-style">
+                                 <a href="/" class="btn btn-lg btn-success">Go Back</a>
+                             </div>
+                         </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+     </div>
+</body>
+</html>

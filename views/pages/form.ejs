@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload The Data</title>
+    <link href="/assests/css/form.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="root">
+    
+        <div class="head-div">
+            <a href="/LaptopASSISTENT" style="color:white; text-decoration: none"><h3 class="logo">LaptopASSISTANT</h3></a>
+            <a href="/" class="Api-link-style btn btn-outline-success" role="button" aria-pressed="true" >Go To Home Page</a>
+        </div>
+
+             <div class="warning">
+               <p id="warning-text" class="text-center text-white"></p>
+              </div>
+      
+         
+        <form action="/form_submit" method="POST" onsubmit="return validate_form();" enctype="multipart/form-data" class="form-styling">
+
+            <div class="header">
+                <h4 style="color: turquoise;" >Enter Laptop Details</h4>
+            </div>
+
+         <div id="style-form">
+            
+            <div class="name">
+                <label for="laptop-name" class="name-labeling">Name</label>
+                <input type="text" id="laptop-name" class="name-laptop" name="laptopName" autocomplete="off" placeholder="Laptop-Name">
+            </div>
+
+            <div class="image" >
+                <label for="uploaded-image" class="label-for-image">Image</label>
+                <input type="file" autocomplete="off" name="image" class="name-image"  id="uploaded-image">
+            </div>
+
+            <div class="link">
+                <label for="laptop-link">Link</label>
+                <input type="text" autocomplete="off" id="laptop-link" class="name-link" name="laptopLink" placeholder="Paste the Link">
+            </div>
+  
+            <div class="price">
+                <label for="laptop-price">Price</label>
+               <input type="text" id="laptop-price" autocomplete="off" class="price" name="laptopPrice" placeholder="Give The Price">
+            </div>
+
+
+
+             
+                  <div class="row">
+                      <div class="display-flex form-group col-md-6">
+                        <label for="inputBrand">Select BRAND</label>
+                        <select id="inputBrand" name="Brand" class="select-tag form-control">
+                          <option name="asus" selected >ASUS</option>
+                          <option name="hp">HP</option>
+                          <option name="apple">APPLE</option>
+                          <option name="acer">ACER</option>
+                          <option name="dell">DELL</option>
+                          <option name="lenovo">LENOVO</option>
+                          <option name="mi">MI</option>
+                        </select>
+                      </div>
+                    </div>
+
+                  <div class="row">
+                      <div class="display-flex form-group col-md-6">
+                        <label for="inputHdd">Select HDD</label>
+                        <select id="inputHdd" name="HDD" class="form-control select-tag">
+                          <option selected>NO HDD</option>
+                          <option name="128h">128 GB</option>
+                          <option name="256h">256 GB</option>
+                          <option name="512h">512 GB</option>
+                          <option name="1h">1 TB</option>
+                        </select>
+                      </div>
+                    </div>
+
+                  <div class="row">
+                      <div class="display-flex form-group col-md-6">
+                        <label for="inputSsd">Select SSD</label>
+                        <select id="inputSsd" name="SSD" class="form-control select-tag">
+                          <option selected>NO SSD</option>
+                          <option name="128s">128 GB</option>
+                          <option name="128s">256 GB</option>
+                          <option name="128s">512 GB</option>
+                          <option name="128s">1 TB</option>
+                        </select>
+                      </div>
+                     </div>
+
+                  <div class="row">
+                      <div class="display-flex form-group col-md-6">
+                        <label for="inputGs">Select GRAPHICS CARD</label>
+                        <select id="inputGs" name="GS" class="form-control select-tag">
+                          <option name="integrated" selected>UHD(INTEGRATED)
+                          </option>
+                          <option name="2gs">2 GB</option>
+                          <option name="4gs">4 GB(NVIDIA)</option>
+                          <option name="6gs">6 GB(NVIDIA)</option>
+                        </select>
+                      </div>
+                    </div>
+
+                  <div class="row">
+                      <div class="display-flex form-group col-md-6">
+                        <label for="inputRam">Select RAM</label>
+                        <select id="inputRam" name="RAM" class="form-control select-tag">
+                          <option name="4r">4 GB</option>
+                          <option name="8r">8GB</option>
+                          <option name="16r">16GB</option>
+                        </select>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="display-flex form-group col-md-6">
+                        <label for="inputGeneration">Select GENERATION</label>
+                        <select id="inputGeneration" name="GENERATION" class="form-control select-tag">
+                          <option name="i3" selected>i3</option>
+                          <option name="R" >AMD R-Series</option>
+                          <option name="i5">i5</option>
+                          <option name="i7">i7</option>
+                          <option name="i9">i9</option>
+                        </select>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="display-flex form-group col-md-6">
+                        <label for="inputProcessor">Select PROCESSOR</label>
+                        <select id="inputProcessor" name="PROCESSOR" class="form-control select-tag">
+                          <option name="intel" selected>INTEL</option>
+                          <option name="amd" >AMD Athlon</option>
+                          <option name="ryzon">RYZON</option>
+                        </select>
+                      </div>
+                  </div>
+                      
+                  <div class="row">
+                      <div class="display-flex form-group col-md-6">
+                        <label for="inputOs">Select OS</label>
+                        <select id="inputOs" name="OS"" class="form-control select-tag">
+                          <option name="windows" selected>WINDOWS 10</option>
+                          <option name="mac" >MAC</option>
+                          <option name="dos" >DOS</option>
+                        </select>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                      <div class="display-flex form-group col-md-6">
+                        <label for="inputInch">Select INCH</label>
+                        <select id="inputInch" name="INCH" class="form-control select-tag">
+                          <option name="13.6" selected>13.6 INCH</option>
+                          <option name="14.2">14.2 INCH</option>
+                          <option name="15.6">15.6 INCH</option>
+                        </select>
+                      </div>
+                  </div>
+           
+
+
+               <div class="submit-buton">
+                   <button type="submit" class="submit-form-buton">Submit</button>
+               </div>
+            </div>
+          </form>
+        </div>
+    <script src="/assests/javascript/form.js"></script>
+</body>
+</html>
