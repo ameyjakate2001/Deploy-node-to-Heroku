@@ -83,9 +83,13 @@ input[type="text"]:focus{
 }
 label{
     font-weight: 500 !important;
+    /* max-width: 30px; */
 }
 label:hover{
    cursor: pointer;
+}
+button, input {
+    overflow: hidden !important;
 }
 
 .image{
@@ -125,7 +129,7 @@ label:hover{
 
 
 
-button[type=submit] {
+/* button[type=submit] {
     background-color: #62529c;
     border: none;
     color: #fff;
@@ -137,9 +141,11 @@ button[type=submit] {
   }
 button[type=submit]:hover {
     background-color: #7264a5;
-  }
+  } */
 button[type=submit]:focus {
     border: none;
+    outline: none;
+    box-shadow: none;
   }
 .display-flex{
     display: flex;
@@ -165,6 +171,10 @@ button[type=submit]:focus {
     .header h4{
         font-size: 1.2em;
     }
+    
+.form-styling{
+    width: 80% !important;
+}
 }
 
 

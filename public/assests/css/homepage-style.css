@@ -98,7 +98,7 @@ body{
     transition: all 0.5s ease-in-out;
 }
 .navbar-light .navbar-brand{
-    color:#65ff4b !important;
+    color:#fff !important;
 }
 .navbar-container{
     padding: 0 10px;
@@ -458,7 +458,6 @@ form{
 .footer-right{
     margin-top: 20px !important;
 }
-
 .footer-right h5{
     margin-top: 20px !important;
 }

@@ -5,7 +5,7 @@ const port = process.env.PORT || 8080 ;
 const DB = require('./db');
 const mongoose = require('mongoose');
 const mongoAtlasUri = 'mongodb://amyjakate:ameyjakate@cluster0-shard-00-00.lstnw.mongodb.net:27017,cluster0-shard-00-01.lstnw.mongodb.net:27017,cluster0-shard-00-02.lstnw.mongodb.net:27017/LaptopAssistant?ssl=true&replicaSet=atlas-kkuefp-shard-0&authSource=admin&retryWrites=true&w=majority';
-
+const SendMail = require('./public/assests/javascript/mail');
 
 
 
@@ -39,6 +39,7 @@ const { chdir } = require('process');
 var fs = require('fs');
 const { Mongoose } = require('mongoose');
 const { db } = require('./models/LaptopSchema');
+const sendMail = require('./public/assests/javascript/mail');
 
 var Storage = diskStorage({
     destination:'./public/uploads/',
@@ -232,7 +233,14 @@ app.post('/SubmitLogin',function(req,res){
     }) 
     newEmail.save().then(item=>{
         console.log('saved to database');
-        res.send('Hello  ' + req.body.email+'.  Your Information Saved To Database');
+        console.log(item);
+        sendMail(req.body.email,req.body.message,function(err,data){
+            if(err)
+              res.status(500).json({message:'internal error'});
+              else
+                res.json({message:'Email Sent !!!!!!'})
+        })
+        // res.send('Hello  ' + req.body.email+'.  Your Information Saved To Database');
     })
      .catch(err=>{
         console.log(' something happend :  ' + err);
