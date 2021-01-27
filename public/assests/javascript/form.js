@@ -14,7 +14,7 @@ $('.dropdown-menu li').on('click', function() {
    var price = document.querySelector('.price');
    var warningText = document.querySelector('#warning-text');
 
-    if(nameLaptop.value === "" || nameImage.files.length === 0  || nameLink.value ==="" || price.value ==="" || isNaN(price.value) === true){
+    if(nameLaptop.value === "" || nameImage.files.length === 0  || nameLink.value ==="" || price.value ==="" ){
              warningText.innerHTML = "Please fill all Input Values and Give the Proper Image";
              valid= false;
     }
